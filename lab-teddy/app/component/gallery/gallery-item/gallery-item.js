@@ -4,9 +4,11 @@ module.exports = {
   template: require('./gallery-item.html'),
   controllerAs: 'galleryItemCtrl',
   controller: ['$log', 'galleryService', function($log, galleryService) {
-    $log.debug('Gallery Item Controller');
+    this.$onInit = () => {
+      $log.debug('Gallery Item Controller');
 
-    this.showEditGallery = false;
+      this.showEditGallery = false;
+    };
   }],
   bindings: {
     gallery:'<',
