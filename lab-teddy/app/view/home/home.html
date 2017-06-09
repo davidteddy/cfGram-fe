@@ -6,5 +6,11 @@
     <gallery-item ng-repeat="item in homeCtrl.galleries" gallery="item"></gallery-item>
   </ul>
 
+  <select
+      name="gallery selection"
+      ng-options="item as item.name for item in homeCtrl.galleries track by item._id"
+      ng-model="homeCtrl.currentGallery">
+  </select>
+
   <thumbnail-container ng-if="homeCtrl.currentGallery" gallery="homeCtrl.currentGallery"></thumbnail-container>
 </section>
