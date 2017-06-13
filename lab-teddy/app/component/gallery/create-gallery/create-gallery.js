@@ -14,6 +14,7 @@ module.exports ={
           let res = this.gallery;
           this.gallery.name = null;
           this.gallery.des = null;
+          this.gallery.created = new Date();
           $rootScope.$emit('newGalleryCreated');
           return res;
         })
