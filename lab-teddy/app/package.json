@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Lab-27",
   "main": "entry.js",
+  "engines": {
+    "node": "4.4.7"
+  },
   "directories": {
     "test": "test"
   },
@@ -10,7 +13,8 @@
     "build": "webpack",
     "build-watch": "webpack-dev-server --inline --hot",
     "test": "karma start --single-run",
-    "test-watch": "karma start"
+    "start": "node server.js",
+    "heroku-postbuild": "webpack -p --progress"
   },
   "repository": {
     "type": "git",
