@@ -3,9 +3,8 @@
   <create-gallery></create-gallery>
 
   <ul>
-    <gallery-item ng-repeat="item in homeCtrl.galleries | orderBy: homeCtrl.gallery.name" gallery="item"></gallery-item>
+    <gallery-item ng-repeat="item in homeCtrl.galleries | orderBy: 'name'" gallery="item"></gallery-item>
   </ul>
-  <input type="number" ng-model="homeCtrl.gallery.name" placeholder="100" value="100">
 
 
   <select
